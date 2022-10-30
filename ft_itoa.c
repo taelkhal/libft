@@ -6,13 +6,13 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 12:52:01 by taelkhal          #+#    #+#             */
-/*   Updated: 2022/10/23 12:47:16 by taelkhal         ###   ########.fr       */
+/*   Updated: 2022/10/30 11:48:45 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_len_numbers(int nb)
+static size_t	ft_len_numbers(int nb)
 {
 	size_t	i;
 
@@ -57,8 +57,7 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
-
 // int main()
 // {
-//     printf ("%s\n", ft_itoa(2147483647));
+//     printf ("%s\n", ft_itoa(156));
 // }

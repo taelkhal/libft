@@ -1,38 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/13 18:40:09 by taelkhal          #+#    #+#             */
-/*   Updated: 2022/10/29 13:17:19 by taelkhal         ###   ########.fr       */
+/*   Created: 2022/10/28 18:52:25 by taelkhal          #+#    #+#             */
+/*   Updated: 2022/10/29 17:47:38 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void ft_lstadd_front(t_list **lst, t_list *new)
 {
-	void	*str;
-
-	str = malloc(count * size);
-	if (count * size == SIZE_MAX || size == SIZE_MAX)
-		return (NULL);
-	if (!str)
-		return (0);
-	ft_bzero(str, (count * size));
-	return (str);
+	new->next = *lst;
+	if (new != NULL)
+		*lst = new;
 }
 // int main()
 // {
-//     char *p;
-//     char a;
-//     // p = calloc(3, 2);
-//     p = ft_calloc(3, 2);
-//     while(a < 3 * 2)
-//     {
-//         printf("%d", *p);
-//         a++;
-//     }
+// 	t_list *list;
+// 	t_list *list1;
+// 	t_list *listn;
+
+// 	list = ft_lstnew("taha");
+// 	list1 = ft_lstnew("1337");
+// 	listn = ft_lstnew("boss");
+
+// 	list -> next = list1;
+// 	list1 -> next = NULL;
+// 	ft_lstadd_front(&list, listn);
+// 	while (listn)
+// 	{
+// 		printf ("%s\n", listn -> content);
+// 		listn = listn -> next;
+// 	}
 // }

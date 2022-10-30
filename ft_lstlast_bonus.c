@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/23 18:49:15 by taelkhal          #+#    #+#             */
-/*   Updated: 2022/10/30 16:33:59 by taelkhal         ###   ########.fr       */
+/*   Created: 2022/10/30 12:34:26 by taelkhal          #+#    #+#             */
+/*   Updated: 2022/10/30 16:13:51 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+t_list *ft_lstlast(t_list *lst)
 {
-	int	i;
-
-	i = 0;
-	if (!s)
-		return ;
-	if (fd < 0)
-		return ;
-	while (s[i])
-	{
-		write (fd, &s[i], 1);
-		i++;
-	}
-}
-#include <fcntl.h>
-int main()
-{
-	int fd = open ("txt.txt", O_RDWR | O_CREAT);
-	ft_putstr_fd(NULL, fd);
+    if (lst == NULL)
+        return (0);
+    while (lst -> next != NULL)
+       lst = lst -> next;
+    return (lst);
 }

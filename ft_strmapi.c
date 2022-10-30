@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 15:58:12 by taelkhal          #+#    #+#             */
-/*   Updated: 2022/10/25 17:18:16 by taelkhal         ###   ########.fr       */
+/*   Updated: 2022/10/30 16:25:08 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 	char	*str;
 
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	i = 0;
 	slen = ft_strlen(s);

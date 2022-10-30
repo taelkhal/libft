@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 13:47:46 by taelkhal          #+#    #+#             */
-/*   Updated: 2022/10/28 16:33:45 by taelkhal         ###   ########.fr       */
+/*   Updated: 2022/10/28 18:57:43 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,14 @@ t_list *ft_lstnew(void *content)
 	list->next = NULL;
 	return (list);
 }
-int main()
-{
-	t_list *lst;
-
-	lst = ft_lstnew("hatim");
-	printf ("%s", lst->content);
-}
+// int main()
+// {
+// 	t_list	*lst;
+// 	t_list  *lst1;
+// 	lst = ft_lstnew("test");
+// 	lst1 = ft_lstnew("tfdszfdsfest");
+// 	lst->next = lst1;
+// 	printf("%s\n",lst->content);
+// 	lst = lst->next;
+// 	printf("%s\n",lst->content);
+// }

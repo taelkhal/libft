@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 18:40:03 by taelkhal          #+#    #+#             */
-/*   Updated: 2022/10/25 17:08:14 by taelkhal         ###   ########.fr       */
+/*   Updated: 2022/11/03 13:08:50 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (str[i] == (unsigned char)c)
-			return (str + i);
+			return (&str[i]);
 		i++;
 	}
 	return (0);

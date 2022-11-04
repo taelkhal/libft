@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 14:27:24 by taelkhal          #+#    #+#             */
-/*   Updated: 2022/10/21 14:56:31 by taelkhal         ###   ########.fr       */
+/*   Updated: 2022/11/01 18:38:34 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,3 @@ char	*ft_strdup(const char *s1)
 	copy[i] = '\0';
 	return (copy);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-// 	char *ptr = "taha";
-// 	printf ("%s", ft_strdup(ptr));
-// }

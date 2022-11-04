@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 18:13:35 by taelkhal          #+#    #+#             */
-/*   Updated: 2022/10/21 21:38:49 by taelkhal         ###   ########.fr       */
+/*   Updated: 2022/11/01 18:41:22 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	newstr[i] = '\0';
 	return (newstr);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-//     char a[] = "taha";
-//     char b[] = "elkhalil";
-//     printf ("%s", ft_strjoin(a, b));
-// }

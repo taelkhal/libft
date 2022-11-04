@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 14:56:33 by taelkhal          #+#    #+#             */
-/*   Updated: 2022/10/25 17:20:19 by taelkhal         ###   ########.fr       */
+/*   Updated: 2022/11/03 13:47:31 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ char	*ft_strrchr(const char *s, int c)
 	while (i >= 0)
 	{
 		if (str[i] == (char)c)
-			return (str + i);
+			return (&str[i]);
 		i--;
 	}
 	if (c == '\0')
-		return (str + i);
+		return (&str[i]);
 	return (0);
 }

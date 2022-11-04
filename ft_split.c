@@ -6,13 +6,13 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 11:50:10 by taelkhal          #+#    #+#             */
-/*   Updated: 2022/10/28 18:04:45 by taelkhal         ###   ########.fr       */
+/*   Updated: 2022/11/03 15:18:20 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_total_words(char const *str, char c)
+int	ft_total_words(char const *str, char c)
 {
 	int	i;
 	int	j;
@@ -33,14 +33,14 @@ static int	ft_total_words(char const *str, char c)
 	return (j);
 }
 
-static int	ft_len_word(char const *str, char c)
+int	ft_len_word(char const *str, char c)
 {
 	int	i;
 	int	j;
 
 	j = 0;
 	i = 0;
-	while (str && str[i] == c)
+	while (str[i] && str[i] == c)
 		i++;
 	while (str[i] && str[i] != c)
 	{
@@ -51,7 +51,7 @@ static int	ft_len_word(char const *str, char c)
 	return (j);
 }
 
-static char	*ft_add_words(const char *str, char c)
+char	*ft_add_words(const char *str, char c)
 {
 	char	*s;
 	int		i;
@@ -91,23 +91,11 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (s[i] && s[i] != c)
 		{
-			str[j] = ft_add_words(s + i, c);
-			i = i + ft_len_word(s + i, c);
+			str[j] = ft_add_words(&s[i], c);
+			i = i + ft_len_word(&s[i], c);
 			j++;
 		}
 	}
 	str[j] = 0;
 	return (str);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-// 	char **sp = ft_split(",  ,taha,aymen,1337", ',');
-// 	int  i = 0;
-// 	while (i < 4)
-// 	{
-// 		printf ("%s\n", sp[i]);
-// 		i++;
-// 	}
-// }

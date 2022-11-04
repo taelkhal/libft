@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 12:14:04 by taelkhal          #+#    #+#             */
-/*   Updated: 2022/10/30 16:35:10 by taelkhal         ###   ########.fr       */
+/*   Updated: 2022/11/01 18:38:06 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		ft_memcpy(d, s, len);
 	return (dst);
 }
-//  int main()
-//  {
-//  	printf ("%s", ft_memmove("abdo","abdo", 4));
-//  }

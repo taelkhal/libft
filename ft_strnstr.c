@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 12:21:19 by taelkhal          #+#    #+#             */
-/*   Updated: 2022/10/30 17:14:16 by taelkhal         ###   ########.fr       */
+/*   Updated: 2022/11/01 18:41:56 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		while (haystack[i + j] == needle[j] && i + j < len)
 		{
 			if (needle[j + 1] == '\0')
-				return ((char *)haystack + i);
+				return ((char *)&haystack[i]);
 			j++;
 		}
 		i++;
 	}
 	return (0);
 }
-// int main()
-// {
-// 	// char str[] = "reda1337encg";
-// 	char chr[] = "3";
-// 	printf ("%s", ft_strnstr(NULL, chr, 1));
-// }

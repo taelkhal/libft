@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 14:47:04 by taelkhal          #+#    #+#             */
-/*   Updated: 2022/10/26 20:46:46 by taelkhal         ###   ########.fr       */
+/*   Updated: 2022/11/01 17:31:41 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sr[a] = '\0';
 	return (sr);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-//     //char a[] = "aymennnsj";
-//     printf("%s",ft_substr(NULL, 5, 5));
-// }

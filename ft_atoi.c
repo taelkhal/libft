@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 16:31:30 by taelkhal          #+#    #+#             */
-/*   Updated: 2022/10/30 18:12:39 by taelkhal         ###   ########.fr       */
+/*   Updated: 2022/11/03 15:39:12 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,27 @@
 
 int	ft_atoi(const char *str)
 {
-	int	a;
-	int t;
-	int len;
+	int					a;
+	unsigned long long	t;
+	int					i;
 
 	a = 1;
 	t = 0;
-	len = 0;
-	while ((*str >= 9 && *str <= 13) || *str == ' ')
-		str++;
-	if (*str == '-')
-			a = a * -1;	
-	if (*str == '-' || *str == '+')
-		str++;
-	while (*str >= '0' && *str <= '9')
+	i = 0;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
+		i++;
+	if (str[i] == '-')
+			a = a * -1;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		t = t * 10 + (*str - '0');
-		str++;
-		len++;
+		t = t * 10 + (str[i] - '0');
+		i++;
 	}
-	if(len >= 19 && a > 0)
+	if (t >= 9223372036854775807 && a > 0)
 		return (-1);
-	if(len >= 19 && a < 0)
+	if (t > 9223372036854775807 && a < 0)
 		return (0);
 	return (t * a);
 }
-// int main()
-// {
-// 	printf ("%d\n", ft_atoi("18446744073709551"));
-// 	printf ("%d", atoi("18446744073709551"));
-// }

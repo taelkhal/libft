@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 15:58:12 by taelkhal          #+#    #+#             */
-/*   Updated: 2022/10/30 16:25:08 by taelkhal         ###   ########.fr       */
+/*   Updated: 2022/11/03 15:14:09 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-
-// char f(unsigned int i, char c)
-// {
-//     char str;
-//     str = c + 1 ;
-//     return (str);
-// }
-
-// int main()
-// {
-//     char str1[] = "ABC";
-//     printf("%s\n", ft_strmapi(str1, *f));
-// }

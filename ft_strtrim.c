@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 18:37:14 by taelkhal          #+#    #+#             */
-/*   Updated: 2022/10/25 17:21:47 by taelkhal         ###   ########.fr       */
+/*   Updated: 2022/11/01 18:42:01 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		j--;
 	return (ft_substr(s1, 0, (j + 1)));
 }
-
-// #include <stdio.h>
-// int main()
-// {
-//     char s1[] = ".//:'taha.//@";
-//     char set[] = "./:@";
-//     printf ("%s", ft_strtrim(s1, set));
-// }

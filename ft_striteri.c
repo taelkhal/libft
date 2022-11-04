@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 17:04:37 by taelkhal          #+#    #+#             */
-/*   Updated: 2022/10/30 16:24:48 by taelkhal         ###   ########.fr       */
+/*   Updated: 2022/11/03 15:16:34 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,25 +21,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		return ;
 	while (s[i])
 	{
-		f(i, (s + i));
+		f(i, (&s[i]));
 		i++;
 	}
 }
-
-// void f(unsigned int i, char *c)
-// {
-
-// 	i = 0;
-// 	while (c[i])
-// 	{
-// 		c[i] = c[i] - 32 ;
-// 		i++;
-// 	}
-// }
-
-// int main()
-// {
-// 	char str[] = "abcd";
-// 	ft_striteri(str, f);
-// 	printf ("%s", str);
-// }
